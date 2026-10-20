@@ -24,10 +24,21 @@ pipeline {
 
         stage('Test'){
             steps{
-                sh 'echo "Text stage"'
-                sh 'test -f build/index.html'
+                sh '''
+                echo "Text stage"
+                test -f build/index.html
+                npm test
+                '''
+                
             }
             
         }
     }
+
+    post{
+        always{
+            junit 'test-results/junit.xml'
+        }
+    }
+
 }
