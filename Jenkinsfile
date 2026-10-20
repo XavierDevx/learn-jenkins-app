@@ -25,7 +25,7 @@ pipeline {
         stage('Test'){
             steps{
                 sh 'echo "Text stage"'
-                ls | grep "build/index.html"
+                sh 'ls | grep "build/index.html"'
             }
             
         }
