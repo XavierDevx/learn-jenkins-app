@@ -36,7 +36,7 @@ pipeline {
                 '''
             }
         }
-    }
+    
 
         stage('E2E') {
             agent {
@@ -53,6 +53,8 @@ pipeline {
                     npx playwright test
                 '''
             }
+        }
+
         }
     }
 
