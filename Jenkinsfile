@@ -83,6 +83,10 @@ pipeline {
                     reuseNode true
                 }
             }
+            environment {
+                NODE_TLS_REJECT_UNAUTHORIZED = '0'
+            }
+
             steps {
                 sh '''
                     npm install netlify-cli
