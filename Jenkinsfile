@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        NETLIFY_SITE_ID = 'melodic-parfait-479eba'
+        NETLIFY_SITE_ID = 'fececafb-e6d9-4fea-a080-c470c8bfd35f'
         NETLIFY_AUTH_TOKEN = credentials('netlify-token')
     }
 
@@ -133,7 +133,7 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'melodic-parfait-479eba'
+                CI_ENVIRONMENT_URL = 'fececafb-e6d9-4fea-a080-c470c8bfd35f'
             }
 
             steps {
